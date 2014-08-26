@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Contact.create(
+	contacts = [
+  	{:name => "Aldo Briano", 
+  	 :email => "aldo@yiftee.com",
+  	 :phone => "7873602289"},
+  	{:name => "Veronica Borges", 
+  	 :email => "veronica@yiftee.com",
+  	 :phone => "6505551212"},
+  	{:name => "Jon Kepecs", 
+  	 :email => "jon@yiftee.com",
+  	 :phone => "4082352354"},
+  	{:name => "Steve Chan", 
+  	 :email => "steve@yiftee.com",
+  	 :phone => "3031125555"}
+  ]
+)
