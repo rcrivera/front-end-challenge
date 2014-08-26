@@ -26,3 +26,69 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+=======
+== Front-end Programming Challenge
+
+Instructions:
+  Fork on github 
+  Commit early, commit often
+  Issue a pull request when your done.
+Tasks
+  (1)  Create a Single Page app where the user can compose a message (max 140 chars), and 		add recipients (sms and/or email).
+  (2)  The input for recipient info should allow for name, email and/or sms.  
+  (3)  As recipients are added on the front-end, the info must be validated and sent to the 		server using the API request: /programming_challenge/add
+  (4)  To enhance usability, during the creation of recipients, create an autocomplete input box 		where the user can choose from previously uploaded recipients.  Use API request  /programming_challenge/autocomplete
+  (5) Have a final submit button to send the message to all recipients using API request: /programming_challenge/send
+  (6) Implement all API requests in PageService.js 
+  (7) Do basic styling of the buttons using CSS classes. Define these classes in 				application_page.css.scss and use variables defined in mixins.css.scss
+  
+
+Requirements:
+  - Use AngularJS framework
+  - Usable in Mobile Devices (Responsive)
+
+
+== API Spec:   (Server domain:  your local host)
+
+Sample Error response: 
+	{ “meta”: {"code":400,"error_type":"param_error"},
+			    “notifications":{},
+			    “response":{}
+			   }
+	} 
+
+GET /programming_challenge/autocomplete
+ Parameters:  
+  	q:  String of either a name/email/phone to query for autocomplete
+ Sample Response  (given parameter of q=“aldo”)
+	{“meta": {“code":200},
+	“notifications":{},
+	“response":  {“total":2,
+			"contacts":[{"name":"Aldo Briano","email":"aldo@yiftee.com","phone":"7873602289"}
+				      ]
+			}
+	}
+
+POST /programming_challenge/add
+ Parameters:  
+  	name
+	email (not required if sms provided)
+ 	sms (not required if email provided)
+ Sample Response
+	{“meta":{"code":200},
+	“notifications":{},
+	“response":{"success":"true"}
+	}
+
+POST /programming_challenge/send
+ Parameters:  
+  	message:
+	array of recipients: {name, email, sms}
+ Sample Response
+	{“meta":{"code":200},
+	“notifications":{},
+	“response”:{“total”:"2",
+			“message”: “Hello”,
+			“success”:”true”	
+			}
+    }

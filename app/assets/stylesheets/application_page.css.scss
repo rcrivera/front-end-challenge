@@ -1,0 +1,31 @@
+@import "bootstrap";
+@import "font-awesome";
+@import "mixins";
+
+
+/** BEGIN BASIC ELEMENT STYLING **/
+
+.primary-color{
+	color:$brand-primary;
+}
+
+.secondary-color{
+	color:$brand-secondary;
+}
+
+.btn{
+	
+}
+
+.btn:active, .btn.active{
+	
+ }
+
+.btn:hover, .btn.hover{
+	
+}
+
+
+.btn.disabled, .btn.disabled:hover{
+	
+}
