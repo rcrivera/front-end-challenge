@@ -37,5 +37,3 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem "compass-rails", "~> 2.0.alpha.0"

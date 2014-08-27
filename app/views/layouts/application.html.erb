@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="front-end-challenge">
 <head>
   <title>FrontEndChallenge</title>
-
-  <%= stylesheet_link_tag    "application_page" %>
-  <%= javascript_include_tag "application_page" %>
-
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div class="container-fluid">
+	<div class="header-title"><h1>Yiftee Front End Challenge</h1></div>
+	<br>
+ 	<%= yield %>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.min.js"></script>
+<%= javascript_include_tag "application" %>
 
 </body>
 </html>
