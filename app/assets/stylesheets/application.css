@@ -12,8 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap.min
+ *= require bootstrap-tagsinput
+ *= require typeahead
  */
-
 
 .container-fluid{
 	padding-top: 100px;

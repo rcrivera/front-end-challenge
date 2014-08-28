@@ -1,2 +1,9 @@
+//= require angular
+//= require jquery
 //= require app
-//= require_tree ./angular
+//= require angular-resource
+//= require bootstrap.min
+//= require bootstrap-tagsinput.min
+//= require underscore-min
+//= require typeahead
+//= require_tree ./angular_modules

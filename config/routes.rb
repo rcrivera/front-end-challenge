@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  post 'programming_challenge/add'
+
+  get 'programming_challenge/autocomplete'
+
+  post 'programming_challenge/send'
+
   root 'home#index'
 
   resources :contacts
@@ -9,13 +15,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  get '/' => 'application#page'
-
-  ### API Calls
-  get '/programming_challenge/autocomplete' => 'application#autocomplete', :defaults => { :format => 'json' }
-  post '/programming_challenge/add' => 'application#add_contact', :defaults => { :format => 'json' }
-  post '/programming_challenge/send' => 'application#send_message', :defaults => { :format => 'json' }
-  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

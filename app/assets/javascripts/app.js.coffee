@@ -1,1 +1,0 @@
-window.App = angular.module('front-end-challenge', ['ngResource'])
