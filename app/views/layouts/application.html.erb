@@ -1,18 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="front-end-challenge" ng-controller="PageCtrl">
-<head>
-  <title>FrontEndChallenge</title>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <%= stylesheet_link_tag "application", media: "all" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div class="container-fluid">
-	<div class="header-title"><h1>Yiftee Front End Challenge</h1></div>
-	<br>
- 	<%= yield %>
-</div>
-<%= javascript_include_tag "application" %>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</body>
+<html>
+	<head>
+		<title>FrontEndChallenge</title>
+		<%= stylesheet_link_tag    "application_page" %>
+		<%= javascript_include_tag "application_page" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<%= yield %>
+	</body>
 </html>

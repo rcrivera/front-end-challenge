@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
-  post 'programming_challenge/add'
 
-  get 'programming_challenge/autocomplete'
+  root 'application#page'
 
-  post 'programming_challenge/send'
-
-  root 'home#index'
-
-  resources :contacts
+  ### API Calls
+  get '/programming_challenge/autocomplete' => 'application#autocomplete', :defaults => { :format => 'json' }
+  post '/programming_challenge/add' => 'application#add_contact', :defaults => { :format => 'json' }
+  post '/programming_challenge/send' => 'application#send_message', :defaults => { :format => 'json' }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
