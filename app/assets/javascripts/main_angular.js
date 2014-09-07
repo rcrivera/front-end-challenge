@@ -20,3 +20,5 @@
 //= require fastclick
 //= require underscore-min
 //= require bigtext
+//= require typeahead
+//= require bootstrap-tagsinput.min
