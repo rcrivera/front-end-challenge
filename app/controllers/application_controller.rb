@@ -40,8 +40,8 @@ class ApplicationController < ActionController::Base
       end
 
     	response[:total] = results.count
+      response[:query] = q.downcase
     	response[:contacts] = results
-	
 
       meta = api_json_meta(200,nil,nil,nil)
 

@@ -22,3 +22,4 @@
 //= require bigtext
 //= require typeahead
 //= require bootstrap-tagsinput.min
+//= require handlebars
