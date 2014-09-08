@@ -19,3 +19,11 @@ $btn-primary-bg: $brand-primary;
 $btn-primary-border: $brand-primary;
 $btn-secondary-bg: $brand-secondary;
 $btn-secondary-border: $brand-secondary;
+
+span > button{
+	margin-left: 15px;
+}
+
+form > span.submit-container{
+	float: right;
+}

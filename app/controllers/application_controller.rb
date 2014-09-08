@@ -65,30 +65,22 @@ class ApplicationController < ActionController::Base
       notifications = {}
       response = {}
       begin
-        email = params[:email]
-        name = params[:name]
-        sms = params[:sms]
+        contact = params[:contact]
 
-  		raise Exception::BadRequest.new(:param_error) unless (name.present? && (email.present? || sms.present?))
+  		raise Exception::BadRequest.new(:param_error) unless (contact.present?)
 
-  		if (sms.present? && (sms.length != 10 && sms.length != 11)) then
-        raise Exception::BadRequest.new(:param_error)
-      end
-
-      if(sms.present?) then
-        number_regex = /\d[0-9]\)*\z/
-        if (!number_regex.match(sms))
+      emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+      if (!emailRegex.match(contact))
+        if (contact.length != 10 && contact.length != 11) then
           raise Exception::BadRequest.new(:param_error)
+        else
+          number_regex = /\d[0-9]\)*\z/
+          if (!number_regex.match(contact))
+            raise Exception::BadRequest.new(:param_error)
+          end
         end
       end
 
-      if email != nil then
-        emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-        if (!emailRegex.match(email))
-            raise Exception::BadRequest.new(:param_error)
-        end
-      end
-		  
       response[:success] = true.to_s
 
       meta = api_json_meta(200,nil,nil,nil)
