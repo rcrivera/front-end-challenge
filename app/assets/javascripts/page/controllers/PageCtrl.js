@@ -29,7 +29,9 @@ angular.module("page.controllers").controller("PageCtrl", [
 		});
 		 
 		$scope.send_message = function(){
+			$('#sending_gif').show();
 			pageService.sendMessage($('#recipients').tagsinput('items'),$scope.message).success(function(response){
+				$('#sending_gif').hide();
 		  	if(response.meta.code == 200){
 		  		$scope.clear();
 				  alert('Your message was sent successfully.');
