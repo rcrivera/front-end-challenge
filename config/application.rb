@@ -20,6 +20,6 @@ module FrontEndChallenge
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.precompile +=
-      ['*.js', 'application_page.css']
+      ['*.js', '*.gif', 'application_page.css']
   end
 end
