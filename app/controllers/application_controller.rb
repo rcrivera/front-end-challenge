@@ -29,7 +29,13 @@ class ApplicationController < ActionController::Base
       	 :phone => "4082352354"},
       	{:name => "Steve Chan", 
       	 :email => "steve@yiftee.com",
-      	 :phone => "3031125555"}
+      	 :phone => "3031125555"},
+        {:name => "Roberto Rivera", 
+         :email => "rivera.roberto89@gmail.com",
+         :phone => "7876134236"},
+        {:name => "Devstud.io", 
+         :email => "hello@devstud.io",
+         :phone => "7870000000"}
       ]
       q = params[:q].strip
       results = []
@@ -128,6 +134,8 @@ class ApplicationController < ActionController::Base
           end
   		  end
 
+        MessageSender.send_message(emails, message).deliver
+        
     		response[:total] = recipient_array.count.to_s
     		response[:message] = message
     		response[:success] = true.to_s
