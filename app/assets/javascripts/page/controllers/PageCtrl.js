@@ -27,6 +27,16 @@ angular.module("page.controllers").controller("PageCtrl", [
 		  	};
     	});
 		});
+
+
+		$scope.templates = [undefined,
+			{name:'Birthday', message:"So many candles for such a small cake? Happy Birthday."},
+			{name:'Graduation', message:"Congrats for graduating successfully, I will wish you achieve great heights and be successful in everything you do."},
+			{name:"I'm Sorry", message:"I LOVE YOU, I'M SORRY, AND I'LL NEVER DO IT AGAIN"}];
+
+		$scope.update_template = function(){
+			$scope.message = $scope.messageTemplate.message
+		}
 		 
 		$scope.send_message = function(){
 			$('#sending_gif').show();
@@ -44,6 +54,7 @@ angular.module("page.controllers").controller("PageCtrl", [
 
 		$scope.clear = function(){
 			$scope.message = "";
+			$scope.messageTemplate = undefined;
 			$('#recipients').tagsinput('removeAll');
 		};
 
