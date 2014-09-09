@@ -26,11 +26,23 @@ angular.module("page.controllers").controller("PageCtrl", [
 				  alert('Invalid input: ' + event.item +'\nPlease enter valid email or phone number.');
 		  	};
     	});
-
 		});
 		 
 		$scope.send_message = function(){
-			pageService.sendMessage($('#recipients').tagsinput('items'),$scope.message);
+			pageService.sendMessage($('#recipients').tagsinput('items'),$scope.message).success(function(response){
+		  	if(response.meta.code == 200){
+		  		$scope.clear();
+				  alert('Your message was sent successfully.');
+		  	}
+		  	else{
+		  		alert('Dude! Try sending your message later.');
+		  	}
+    	});
+		};
+
+		$scope.clear = function(){
+			$scope.message = "";
+			$('#recipients').tagsinput('removeAll');
 		};
 
 }]);

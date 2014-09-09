@@ -21,9 +21,86 @@ $btn-secondary-bg: $brand-secondary;
 $btn-secondary-border: $brand-secondary;
 
 span > button{
-	margin-left: 15px;
+	margin-left: 8px;
 }
 
 form > span.submit-container{
 	float: right;
+}
+
+#angularApp{
+	margin-top: 100px;
+}
+
+body{
+	background-color: #FA6900;
+}
+
+textarea{
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.panel-heading{
+	text-align: center;
+	font-family: 'Lobster', cursive;
+}
+
+.panel{
+	background-color: #E0E4CC;
+}
+
+label{
+	font-family: 'Lato', sans-serif;
+}
+
+.bootstrap-tagsinput{
+  width: 100%;
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+    margin-bottom: 0;
+}
+.tt-hint {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #999;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.tt-dropdown-menu {
+    min-width: 400px;
+    margin-top: 2px;
+    padding: 5px 0;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+
+}
+.tt-suggestion {
+    display: block;
+    padding: 3px 20px;
+}
+.tt-suggestion.tt-is-under-cursor {
+    color: #fff;
+    background-color: #dfdfdf;
+}
+.tt-suggestion.tt-is-under-cursor a {
+    color: #fff;
+}
+.tt-suggestion p {
+    margin: 0;
 }

@@ -1,9 +1,9 @@
 <div id="angularApp" ng-app="pageApp"  ng-controller="PageCtrl"  >
 	<div class="container-fluid">
-		<div class="col-md-10 col-sm-9 small-padding"> 
+		<div class="col-md-12 col-sm-12"> 
 			<div class="panel panel-default small-margin">
 				<div class="panel-heading">
-					<h2>Front-end Programming Challenge</h2>
+					<h1>Share a message with your friends!</h1>
 				</div>
 				<div class="panel-body">
 					<div class="row">
@@ -17,7 +17,7 @@
 						  	<label for="message">Message</label>
 						    <textarea class="form-control" id="message" placeholder="Message up to 140 characters" ng-model="message" maxlength="140"></textarea>
 						  </div>
-						  <span class="submit-container"><b>{{140-message.length}}</b><button type="submit" class="btn btn-default" ng-click='send_message()'>Send</button></span>
+						  <span class="submit-container"><i class="fa fa-clock-o"></i><b>{{140-message.length}}</b><button class="btn btn-warning" ng-click='clear()'><i class="fa fa-eraser"></i> Clear</button><button type="submit" class="btn btn-success" ng-click='send_message()'><i class="fa fa-paper-plane"></i>  Send</button></span>
 						</form>
 					  </div>
 					</div>
