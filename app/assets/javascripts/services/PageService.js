@@ -14,9 +14,13 @@ function($http, $q){
 	
 	pageService.initPromise = initPromise.promise;
 
-	
 	pageService.sendMessage = function(recipients, message){
-		
+		return $http({
+		    url: '/programming_challenge/send',
+		    method: "POST",
+		    data: { 'recipients' : recipients, 'message' : message }
+		});
+
 	};
 
 	pageService.autocomplete = function(){

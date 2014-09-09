@@ -30,8 +30,7 @@ angular.module("page.controllers").controller("PageCtrl", [
 		});
 		 
 		$scope.send_message = function(){
-			$scope.message = 'This is message';
-			$scope.recipients = $('#recipients').val();
+			pageService.sendMessage($('#recipients').tagsinput('items'),$scope.message);
 		};
 
 }]);
