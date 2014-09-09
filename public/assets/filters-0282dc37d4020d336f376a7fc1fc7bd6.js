@@ -1,0 +1,1 @@
+angular.module("yiftee.filters").filter("capitalize",function(){return function(e){return null!=e&&(e=e.toLowerCase()),e.substring(0,1).toUpperCase()+e.substring(1)}});
